@@ -1,0 +1,10 @@
+pnpm lint-staged
+
+pnpm typecheck
+pnpm typecheck:test
+pnpm typecheck:e2e
+
+pnpm badge
+git add badges/coverage.svg
+
+pnpm e2e

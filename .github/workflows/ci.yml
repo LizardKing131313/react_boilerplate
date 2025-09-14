@@ -1,0 +1,48 @@
+---
+name: CI
+
+"on":
+  push:
+    branches: ["**"]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Typecheck test
+        run: pnpm typecheck:test
+
+      - name: Typecheck e2e
+        run: pnpm typecheck:e2e
+
+      - name: Test
+        run: pnpm test
+
+      - name: Test e2e
+        run: pnpm e2e

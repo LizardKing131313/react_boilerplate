@@ -22,9 +22,11 @@ jobs:
           node-version: 20
           cache: pnpm
 
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: true   # тут version убрали!
+      - name: Enable Corepack and prepare pnpm from packageManager
+        run: |
+          corepack enable
+          corepack install
+          pnpm -v
 
       - name: Install deps
         run: pnpm install --frozen-lockfile

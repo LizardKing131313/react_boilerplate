@@ -4,7 +4,8 @@
 [![Qodana](https://github.com/LizardKing131313/react_boilerplate/actions/workflows/qodana_code_quality.yml/badge.svg)](https://github.com/LizardKing131313/react_boilerplate/actions/workflows/qodana_code_quality.yml)
 ![Coverage](badges/coverage.svg)
 
-Vite + React + TS (strict), ESLint flat, Prettier, Vitest, Tailwind, Query, Playwright, pre-commit, Qodana.
+Vite + React + TS (strict), ESLint flat, Prettier, Vitest,
+Tailwind, Query, Playwright, pre-commit, Qodana.
 
 ## Быстрый старт
 
@@ -16,4 +17,4 @@ make dev
 
 ## Команды
 
-`make dev | build | preview | lint | typecheck | test | e2e | format | ci`
+`make install | dev | build | preview | lint | typecheck | test | e2e | format | ci`

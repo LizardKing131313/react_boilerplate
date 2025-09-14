@@ -62,7 +62,13 @@ export default [
     },
   },
   {
-    files: ["*.config.{ts,js,cjs,mjs}", "vite.config.ts", "tailwind.config.ts"],
+    files: [
+      "*.config.{ts,js,cjs,mjs}",
+      "vite.config.ts",
+      "vitest.config.ts",
+      "tailwind.config.ts",
+      "playwright.config.ts"
+    ],
     languageOptions: {
       sourceType: "module",
       globals: { ...globals.node, ...globals.es2024 },

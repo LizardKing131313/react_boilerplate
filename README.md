@@ -17,4 +17,5 @@ make dev
 
 ## Команды
 
-`make install | dev | build | preview | lint | typecheck | test | e2e | format | ci`
+`make install | dev | build | preview | lint |
+typecheck | test | e2e | format | ci`

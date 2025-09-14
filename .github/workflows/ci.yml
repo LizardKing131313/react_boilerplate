@@ -30,12 +30,6 @@ jobs:
           version: 9.6.0
           run_install: false
 
-      - name: Show versions
-        run: |
-          node -v
-          corepack -v || true
-          pnpm -v
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
